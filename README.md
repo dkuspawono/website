@@ -48,7 +48,7 @@ gunicorn foundation.wsgi:application --access-logfile '-' --error-logfile '-' # 
 ```
 
 Another option is to use Docker. For this one you should configure your database to work with remote connections using a proper IP address in the connection string or you should use default SQLite database (omit `DATABASE_URL`):
-```
+`` `
 docker build -t okfn .
 docker run -d -p 8888:80 -e DATABASE_URL=<change_me> -e <...> okfn
 ```
